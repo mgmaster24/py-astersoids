@@ -40,7 +40,7 @@ class SpriteCollection:
     md_asteroid = Sprite("md_asteroid", md_asteroid_img)
     self.sprites.append(md_asteroid)
 
-    sm_asteroid_rect = (206, 209, 19, 20)
+    sm_asteroid_rect = (206, 208, 19, 20)
     sm_asteroid_img: pygame.Surface = sprite_sheet.image_at(sm_asteroid_rect)
     sm_asteroid_img = pygame.transform.scale2x(sm_asteroid_img)
     sm_asteroid = Sprite("sm_asteroid", sm_asteroid_img)

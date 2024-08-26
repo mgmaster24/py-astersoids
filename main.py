@@ -14,6 +14,7 @@ def main():
   print("Screen height:", SCREEN_HEIGHT)
 
   screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+  bg_img = pygame.image.load("bg_02_h.png")
   game_sprites = SpriteCollection()
   game_sprites.load_sprites("asteroids-arcade.png")
 
@@ -35,7 +36,6 @@ def main():
     for event in pygame.event.get():
       if event.type == pygame.QUIT:
         return
-
     for obj in updateable:
       obj.update(delta_time)
 
@@ -51,6 +51,7 @@ def main():
 
     screen.fill("black")
 
+    screen.blit(bg_img, (0,0))
     for obj in renderable:
       obj.draw(screen)
 
